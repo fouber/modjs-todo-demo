@@ -116,8 +116,8 @@ fis release
 1. ``.less`` 后缀的文件是less文件，编译后得到css文件。
 1. ``.minix.less`` 后缀的文件定义less的minix，编译后不会产出。
 1. ``.coffee`` 后缀的文件是coffee-script，编译后得到js文件。
-1. ``.tmpl`` 后缀的文件是underscore前端模板，左右定界符为 ``<%`` 和 ``%>``，编译后不会产出。在js或coffee中使用 [``__inline('path')``](https://github.com/fouber/seajs-todo-demo/blob/c80f78cd56c2ad31ff344892f7a0dd5648f049d0/sea-modules/views/todos.js#L12) 函数将其嵌入到js或coffee文件中作为模板函数使用。
-1. 扔在 ``sea-modules`` 目录下的js、css、less、coffee文件都是模块化文件，会自动包装define，自己就不要写了。使用seajs.use或者require加载模块的时候id与文件的对应规则是这样的：
+1. ``.tmpl`` 后缀的文件是underscore前端模板，左右定界符为 ``<%`` 和 ``%>``，编译后不会产出。在js或coffee中使用 [``__inline('path')``](https://github.com/fouber/modjs-todo-demo/blob/master/modules/views/todos.js#L12) 函数将其嵌入到js或coffee文件中作为模板函数使用。
+1. 扔在 ``modules`` 目录下的js、css、less、coffee文件都是模块化文件，会自动包装define，自己就不要写了。使用require.async或者require加载模块的时候id与文件的对应规则是这样的：
 <table>
     <tr>
         <td>文件</td>
@@ -125,19 +125,19 @@ fis release
         <td>举个例子</td>
     </tr>
     <tr>
-        <td>/sea-modules/a.js</td>
+        <td>/modules/a.js</td>
         <td>a</td>
-        <td>seajs.use('a');</td>
+        <td>require.async('a');</td>
     </tr>
     <tr>
-        <td>/sea-modules/b/b.js</td>
+        <td>/modules/b/b.js</td>
         <td>b</td>
-        <td>seajs.use('b');</td>
+        <td>require.async('b');</td>
     </tr>
     <tr>
-        <td>/sea-modules/b/c.js</td>
+        <td>/modules/b/c.js</td>
         <td>b/c</td>
-        <td>seajs.use('b/c');</td>
+        <td>require.async('b/c');</td>
     </tr>
 </table>
 1. 扔在 ``lib`` 目录下的文件不被认为是模块化的，请直接在页面上使用script或link标签引用。
