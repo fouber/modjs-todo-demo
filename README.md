@@ -19,6 +19,16 @@ npm install -g fis
 
 安装成功后执行 ``fis -h`` 即可看到相关开发命令帮助
 
+## 安装fis的扩展插件，这个项目用到的
+
+```bash
+npm install -g fis-parser-utc
+npm install -g fis-parser-coffee-script
+npm install -g fis-parser-less
+npm install -g fis-postprocessor-require-async
+npm install -g fis-postpackager-modjs
+```
+
 ## 让代码跑起来！
 
 首先，启动内置的调试服务器：
