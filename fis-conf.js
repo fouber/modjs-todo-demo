@@ -40,7 +40,7 @@ fis.config.merge({
     roadmap : {
         path : [
             {
-                //一级同名组件，可以引用短路径，比如sea-modules/jquery/juqery.js
+                //一级同名组件，可以引用短路径，比如modules/jquery/juqery.js
                 //直接引用为var $ = require('jquery');
                 reg : /^\/modules\/([^\/]+)\/\1\.(js|coffee)$/i,
                 //是组件化的，会被jswrapper包装
@@ -49,11 +49,11 @@ fis.config.merge({
                 id : '$1'
             },
             {
-                //sea-modules目录下的其他文件
+                //modules目录下的其他文件
                 reg : /^\/modules\/(.*)\.(js|coffee)$/i,
                 //是组件化的，会被jswrapper包装
                 isMod : true,
-                //id是去掉sea-modules和.js后缀中间的部分
+                //id是去掉modules和.js后缀中间的部分
                 id : '$1'
             },
             {
@@ -112,10 +112,6 @@ fis.config.merge({
 
 //csssprite处理时图片之间的边距，默认是3px
 fis.config.set('settings.spriter.csssprites.margin', 20);
-
-//配置一些seajs.config的配置项
-//请不要在此配置alias项，系统会帮你管理的
-//fis.config.set('seajs', {});
 
 //使用spmx release是添加-d remote参数，即可将项目发布到http://vm-1.chongzi.kd.io/机器上
 //这个机器有时候可能没开启，大家自己另外搭服务器尝试吧
