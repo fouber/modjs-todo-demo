@@ -4,19 +4,6 @@
 npm install -g fis
 ```
 
-非win系统最好将npm的包安装在用户目录下，尽量避免使用 ``sudo`` 来安装。修改npm install -g安装目录的方法为：
-
-```bash
-# 设置global路径为用户目录
-npm config set prefix ~/npm
-# 将~/npm/bin路径加到PATH变量中
-echo -e '\nexport PATH=~/npm/bin:$PATH' >> ~/.bashrc
-# 重新载入.bashrc
-source ~/.bashrc
-# 安装fis
-npm install -g fis
-```
-
 安装成功后执行 ``fis -h`` 即可看到相关开发命令帮助
 
 ## 安装fis的扩展插件，这个项目用到的
