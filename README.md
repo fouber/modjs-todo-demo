@@ -96,13 +96,12 @@ fis release
     fis release -Domlp -d ../output
     ```
 
-1. 文件监听、启动live-reload服务器、同时发布到本地调试目录、outpu目录和远端服务器：
+1. 文件监听、live-reload、同时发布到本地调试目录、outpu目录和远端服务器：
 
     ```bash
     fis release -wLd preview,remote,../output
     ```
 
-    使用自动刷新功能需要添加 ``live-reload`` 浏览器插件，请google之，我没做可以自动添加脚本的功能，因为懒。。。
 
 ## 目录规范
 
